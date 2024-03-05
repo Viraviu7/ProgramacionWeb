@@ -1,11 +1,11 @@
-package desarrolloweb.progwebp1back.controllers;
+package programacionweb.springback.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import desarrolloweb.progwebp1back.models.db.entities.Usuario;
-import desarrolloweb.progwebp1back.models.db.services.UsuarioService;
+import programacionweb.springback.models.db.entities.Usuario;
+import programacionweb.springback.models.db.services.UsuarioService;
 
 import java.util.List;
 

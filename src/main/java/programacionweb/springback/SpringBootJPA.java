@@ -1,4 +1,4 @@
-package desarrolloweb.progwebp1back;
+package programacionweb.springback;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

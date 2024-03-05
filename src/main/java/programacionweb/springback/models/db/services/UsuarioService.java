@@ -1,10 +1,10 @@
-package desarrolloweb.progwebp1back.models.db.services;
+package programacionweb.springback.models.db.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import desarrolloweb.progwebp1back.models.db.entities.Usuario;
-import desarrolloweb.progwebp1back.models.db.repositories.UsuarioRepository;
+import programacionweb.springback.models.db.entities.Usuario;
+import programacionweb.springback.models.db.repositories.UsuarioRepository;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package desarrolloweb.progwebp1back.models.db.entities;
+package programacionweb.springback.models.db.entities;
 
 import java.sql.Timestamp;
 
@@ -7,6 +7,10 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Data;
 
@@ -17,7 +21,7 @@ public class Usuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idUsuario;
+    private Long id_usuario;
 
     @Column(nullable = false, length = 100)
     private String username;
@@ -38,7 +42,7 @@ public class Usuario {
     private String password;
 
     @Column(nullable = false, length = 100)
-    private String repPassword;
+    private String rep_password;
 
     @Column(nullable = false)
     private Boolean enabled;
@@ -50,5 +54,5 @@ public class Usuario {
     private String rol;
 
     @Column(nullable = false)
-    private Timestamp createdAt;
+    private Timestamp created_at;
 }

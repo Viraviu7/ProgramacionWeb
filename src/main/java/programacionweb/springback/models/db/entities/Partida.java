@@ -1,4 +1,4 @@
-package desarrolloweb.progwebp1back.models.db.entities;
+package programacionweb.springback.models.db.entities;
 
 import lombok.Data;
 
@@ -8,6 +8,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
@@ -21,11 +22,11 @@ public class Partida {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idPartida;
+    private Long id_partida;
 
     @ManyToOne
-    @JoinColumn(name = "creador", referencedColumnName = "email", nullable = false)
-    private Usuario creador;
+    @JoinColumn(referencedColumnName = "email", nullable = false)
+    private Usuario creador_email;
 
     @Column(nullable = false, length = 100)
     private String deporte;
@@ -40,10 +41,10 @@ public class Partida {
     private Date fecha;
 
     @Column(nullable = false)
-    private Time horaComienzo;
+    private Time hora_comienzo;
 
     @Column(nullable = false)
-    private Time horaFinal;
+    private Time hora_final;
 
     @Column(nullable = false)
     private Integer participantes;
@@ -53,4 +54,5 @@ public class Partida {
 
     @Column(nullable = false, length = 100)
     private String comentarios;
+    
 }

@@ -1,4 +1,4 @@
-package desarrolloweb.progwebp1back.models.db.entities;
+package programacionweb.springback.models.db.entities;
 
 import lombok.Data;
 
@@ -20,19 +20,20 @@ public class Mensaje {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idMensaje;
+    private Long id_mensaje;
 
     @ManyToOne
-    @JoinColumn(name = "creador", referencedColumnName = "email", nullable = false)
-    private Usuario creador;
+    @JoinColumn(referencedColumnName = "email", nullable = false)
+    private Usuario creador_email;
 
     @ManyToOne
-    @JoinColumn(name = "destinatario", referencedColumnName = "email", nullable = false)
-    private Usuario destinatario;
+    @JoinColumn(referencedColumnName = "email", nullable = false)
+    private Usuario destinatario_email;
 
     @Column(nullable = false)
-    private Timestamp createdAt;
+    private Timestamp created_at;
 
     @Column(columnDefinition = "TEXT")
     private String contenido;
+
 }
