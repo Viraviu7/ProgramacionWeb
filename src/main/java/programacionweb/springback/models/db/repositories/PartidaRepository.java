@@ -7,4 +7,6 @@ import programacionweb.springback.models.db.entities.Partida;
 
 @RepositoryRestResource
 public interface PartidaRepository extends JpaRepository<Partida, Long> {
+
+    Partida findByUsername(String username);
 }
