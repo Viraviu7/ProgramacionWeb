@@ -14,14 +14,18 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import programacionweb.springback.models.db.entities.Sugerencia;
 import programacionweb.springback.models.db.entities.Usuario;
 import programacionweb.springback.models.db.repositories.SugerenciaRepository;
 
 @SpringBootTest
+@ExtendWith(SpringExtension.class)
 public class SugerenciaRepositoryTest {
 
     @Autowired
@@ -37,7 +41,7 @@ public class SugerenciaRepositoryTest {
         .apellidos("Pizarro")
         .username("julianpizarro")
         .password("123")
-        .email("b")
+        .email("b@example.com")
         .edad(0)
         .rep_password("123")
         .enabled(true)
@@ -49,7 +53,7 @@ public class SugerenciaRepositoryTest {
         .apellidos("perez")
         .username("and3sperez")
         .password("123")
-        .email("a")
+        .email("a@example.com")
         .edad(0)
         .rep_password("123")
         .enabled(true)

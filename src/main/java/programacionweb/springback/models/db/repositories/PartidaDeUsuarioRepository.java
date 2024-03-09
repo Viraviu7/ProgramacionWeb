@@ -14,5 +14,6 @@ public interface PartidaDeUsuarioRepository extends JpaRepository<PartidaDeUsuar
      @Query("SELECT p FROM PartidaDeUsuario p WHERE p.id_partida.id_partida = ?1")
      List<PartidaDeUsuario> findByPartidaId(Long id);
 
-     //List<PartidaDeUsuario> findByUsuarioUsername(String username);
+     @Query("SELECT p FROM PartidaDeUsuario p WHERE p.id_usuario.username = ?1")
+     List<PartidaDeUsuario> findByUsuarioUsername(String username);
 }

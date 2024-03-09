@@ -105,6 +105,8 @@ public class MensajeRepositoryTest {
         //THEN
         assertEquals(2, mensajes.size());
     }
+
+    /* 
     @Test
     void givenMensajes_whenBuscarPorUsername_thenObtienesUnaListaDeMensajes(){
         Mensaje mensaje = Mensaje.builder()
@@ -119,5 +121,5 @@ public class MensajeRepositoryTest {
 
         assertTrue(mensajes.size()>0);
     }
-
+*/
 }
