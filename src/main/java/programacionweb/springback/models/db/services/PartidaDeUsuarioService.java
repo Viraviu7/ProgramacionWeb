@@ -12,6 +12,7 @@ import java.util.List;
 @Service
 public class PartidaDeUsuarioService {
 
+
     @Autowired
     private PartidaDeUsuarioRepository partidaDeUsuarioRepository;
 
@@ -39,8 +40,7 @@ public class PartidaDeUsuarioService {
         return partidaDeUsuarioRepository.findById(id).orElse(null);
     }
 
-    @Query("SELECT p FROM PartidaDeUsuario p WHERE p.usuario.username = ?1")
-    public List<PartidaDeUsuario> obtenerPartidasDeUsuarioPorUsername(String username) {
-        return partidaDeUsuarioRepository.findByUsuarioUsername(username);
-    }
+    // public List<PartidaDeUsuario> obtenerPartidasDeUsuarioPorUsername(String username) {
+    //     return partidaDeUsuarioRepository.findByUsuarioUsername(username);
+    // }
 }

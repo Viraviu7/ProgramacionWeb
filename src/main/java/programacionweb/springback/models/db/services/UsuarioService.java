@@ -47,9 +47,10 @@ public class UsuarioService {
         return usuarioRepository.existsById(id);
     }
 
-    @Query("SELECT u FROM Usuario u WHERE u.username = ?1")
-    public Usuario obtenerPorUsername(String username) {
-        return usuarioRepository.findByUsername(username);
-    }
+ 
+    // public Usuario obtenerPorUsername(String username) {
+    //     return usuarioRepository.findByUsername(username);
+    // }
+
 
 }

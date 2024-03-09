@@ -12,6 +12,7 @@ import java.util.List;
 @Service
 public class SugerenciaService {
 
+
     @Autowired
     private SugerenciaRepository sugerenciaRepository;
 
@@ -47,9 +48,9 @@ public class SugerenciaService {
         return sugerenciaRepository.existsById(id);
     }
 
-    @Query("SELECT s FROM Sugerencia s WHERE s.username = ?1")
-    public Sugerencia obtenerPorUsername(String username) {
-        return sugerenciaRepository.findByUsername(username);
-    }
+
+    // public Sugerencia obtenerPorUsername(String username) {
+    //     return sugerenciaRepository.findByUsername(username);
+    // }
 
 }

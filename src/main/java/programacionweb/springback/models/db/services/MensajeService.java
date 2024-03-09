@@ -39,8 +39,7 @@ public class MensajeService {
         return mensajeRepository.findById(id).orElse(null);
     }
 
-    @Query("SELECT m FROM Mensaje m WHERE m.username = ?1")
-    public List<Mensaje> obtenerMensajesPorUsername(String username) {
-        return mensajeRepository.findByUsername(username);
-    }
+    // public List<Mensaje> obtenerMensajesPorUsername(String username) {
+    //     return mensajeRepository.findByUsername(username);
+    // }
 }

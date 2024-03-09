@@ -14,8 +14,7 @@ class SpringBackApplicationTests {
 
 	@Test
 	void contextLoads() {
-		int test = 1;
-		assertEquals(1, test);
+
 	}
 	
 }

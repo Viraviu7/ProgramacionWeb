@@ -47,8 +47,8 @@ public class PartidaService {
         return partidaRepository.existsById(id);
     }
 
-    @Query("SELECT p FROM Partida p WHERE p.username = ?1")
-    public Partida obtenerPartidaPorUsername(String username) {
-        return partidaRepository.findByUsername(username);
-    }
+
+    // public Partida obtenerPartidaPorUsername(String username) {
+    //     return partidaRepository.findByUsername(username);
+    // }
 }

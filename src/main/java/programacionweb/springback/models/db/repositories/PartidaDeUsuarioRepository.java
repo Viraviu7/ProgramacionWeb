@@ -10,5 +10,5 @@ import programacionweb.springback.models.db.entities.PartidaDeUsuario;
 @RepositoryRestResource
 public interface PartidaDeUsuarioRepository extends JpaRepository<PartidaDeUsuario, Long> {
 
-    List<PartidaDeUsuario> findByUsuarioUsername(String username);
+     // List<PartidaDeUsuario> findByUsuarioUsername(String username);
 }
