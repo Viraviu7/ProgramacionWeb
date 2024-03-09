@@ -18,6 +18,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import programacionweb.springback.models.db.entities.Mensaje;
+import programacionweb.springback.models.db.entities.Partida;
 import programacionweb.springback.models.db.entities.Usuario;
 import programacionweb.springback.models.db.repositories.MensajeRepository;
 
@@ -64,7 +65,7 @@ public class MensajeRepositoryTest {
 
     }
     @Test
-    void givenAnPartida_whenSave_thenPartidawithId(){
+    void givenAnMensaje_whenSave_thenMensajewithId(){
         //given
         Mensaje mensaje = Mensaje.builder()
                 .creador_email(user)
@@ -80,7 +81,7 @@ public class MensajeRepositoryTest {
     }
     @Test
     @DisplayName("dado un conjunto de usuarios al buscarlo todos obtenemos la lista de los usuarios en la base de datos")
-    void shouldGetAllPartidas(){
+    void shouldGetAllMensajes(){
         //GIVEN
         Mensaje mensaje = Mensaje.builder()
                 .creador_email(user)
@@ -105,7 +106,7 @@ public class MensajeRepositoryTest {
         assertEquals(2, mensajes.size());
     }
     @Test
-    void givenPartidas_whenBuscarPorNombreyApellido_thenObtienesUnaListaDePartidas(){
+    void givenMensajes_whenBuscarPorUsername_thenObtienesUnaListaDeMensajes(){
         Mensaje mensaje = Mensaje.builder()
                 .creador_email(user)
                 .destinatario_email(user2)

@@ -124,7 +124,7 @@ public class PartidaRepositoryTest {
         assertEquals(2, partidas.size());
     }
     @Test
-    void givenPartidas_whenBuscarPorNombreyApellido_thenObtienesUnaListaDePartidas(){
+    void givenPartidas_whenBuscarPorUsername_thenObtienesUnaListaDePartidas(){
         Partida partida = Partida.builder()
                 .creadorEmail(user)
                 .deporte("Futbol")
